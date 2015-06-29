@@ -13,23 +13,22 @@ public class SplashPanel {
     private String imageURL;
     private Rectangle progressBar;
     private Color colorBar;
-    private int time, velocity;
     
     public SplashPanel() {
         splash = SplashScreen.getSplashScreen();
     }
     
     public void startSplash(JFrame mainWindow) {
-        timer(time , velocity);
+        timer(300 , 10);
         updateImagen();
         if(splash != null){
             Graphics2D g2d = splash.createGraphics();
-            for(int i = 0; i < progressBar.width; i += 10){
+            for(int i = 0; i < 540; i++){
                 g2d.setColor(colorBar);
                 g2d.fillRect(progressBar.x,progressBar.y,i,progressBar.height);
                 splash.update();
                 try{
-                    Thread.sleep(velocity);
+                    Thread.sleep(1);
                 }catch(InterruptedException ie){
                     
                 }//END TRY/CATCH
@@ -73,10 +72,5 @@ public class SplashPanel {
     
     public void setColorBar(Color color) {
         this.colorBar = color;
-    }
-    
-    public void setTime(int time, int speed) {
-        this.time = time;
-        this.velocity = speed;
     }
 }
