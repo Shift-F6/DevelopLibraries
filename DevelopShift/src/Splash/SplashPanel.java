@@ -3,12 +3,16 @@ package Splash;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.awt.SplashScreen;
 import javax.swing.JFrame;
 
 public class SplashPanel {
     
     private final SplashScreen splash;
+    private String imageURL;
+    private Rectangle progressBar;
+    private Color colorBar;
     
     public SplashPanel() {
         splash = SplashScreen.getSplashScreen();
@@ -20,8 +24,8 @@ public class SplashPanel {
         if(splash != null){
             Graphics2D g2d = splash.createGraphics();
             for(int i = 0; i < 540; i++){
-                g2d.setColor(new Color(215,215,215));
-                g2d.fillRect(0,0,i,15);
+                g2d.setColor(colorBar);
+                g2d.fillRect(progressBar.x,progressBar.y,i,progressBar.height);
                 splash.update();
                 try{
                     Thread.sleep(1);
@@ -46,9 +50,10 @@ public class SplashPanel {
     
     private void updateImagen() {
         try{
-            splash.setImageURL(getClass().getResource("/Images/Logo.png"));
+            System.out.println(""+this.imageURL);
+            splash.setImageURL(getClass().getResource(imageURL));
         }catch(Exception e){
-            System.out.println("error"+e.getStackTrace());
+            System.out.println("error"+e.toString());
         }
     }
 
@@ -57,4 +62,15 @@ public class SplashPanel {
         mainMenu.toFront();
     }
     
+    public void setImageURL(String url) {
+        this.imageURL = url;
+    }
+    
+    public void setProgressBar(Rectangle bounds) {
+        this.progressBar = bounds;
+    }
+    
+    public void setColorBar(Color color) {
+        this.colorBar = color;
+    }
 }
