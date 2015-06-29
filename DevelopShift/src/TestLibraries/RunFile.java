@@ -1,14 +1,15 @@
 
 package TestLibraries;
 
-import Splash.ScreenSplash;
+import Splash.SplashPanel;
+
 
 public class RunFile {
 
     public static void main(String[] args) {
         LoginExample loginExample = new LoginExample();
-        ScreenSplash splash = new ScreenSplash();
-        splash.Animar();
+        SplashPanel splash = new SplashPanel();
+        splash.startSplash(loginExample);
     }
     
 }

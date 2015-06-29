@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-SplashScreen-Image: Images/Logo.png
+SplashScreen-Image: Images/SplashScreen.png
 X-COMMENT: Main-Class will be added automatically by build
 
