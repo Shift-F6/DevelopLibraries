@@ -25,15 +25,12 @@ public class ScreenSplash{
         if(splash != null){
             Graphics2D g2d = splash.createGraphics();
             g2d.setColor(Color.black);
-//            for(int c = 0; c < 100;c++){
-//            g2d.drawString("Cargando "+c+" %",95, 295);
-//            splash.update();
-//            }
-            g2d.drawImage(new ImageIcon(getClass().getResource("/images/Shift-F6_header.png")).getImage(),80 , 40, 460, 120, null);
-            g2d.drawImage(new ImageIcon(getClass().getResource("/images/logoShiftKey.png")).getImage(),390, 10, 120, 120,null);
+            g2d.drawImage(new ImageIcon(getClass().getResource("/images/Header.png")).getImage(),0,0,400,112,null);
+            g2d.drawImage(new ImageIcon(getClass().getResource("/images/Shift-F6.png")).getImage(),120 , 140, 400, 80, null);
+            g2d.drawImage(new ImageIcon(getClass().getResource("/images/logoShiftKey.png")).getImage(),390, 120, 120, 120,null);
             g2d.setColor(Color.black);            
             g2d.setFont(new Font("'Ejecutando Grandes Ideas'",Font.BOLD,20));
-            g2d.drawString(g2d.getFont().getName(), 180, 200);
+            g2d.drawString(g2d.getFont().getName(), 140, 260);
             for(int i = 0; i < 395; i++){
                 g2d.setPaint(new GradientPaint(5,3,Color.RED, 100, 10, Color.BLACK,true));
                 //g2d.setPaint(new GradientPaint(100,20,Color.red, 10, 100, Color.black,true));
