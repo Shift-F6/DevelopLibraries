@@ -27,7 +27,7 @@ public class ScreenSplash{
             g2d.setColor(Color.black);
             g2d.drawImage(new ImageIcon(getClass().getResource("/images/Header.png")).getImage(),0,0,400,112,null);
             g2d.drawImage(new ImageIcon(getClass().getResource("/images/Shift-F6.png")).getImage(),120 , 140, 400, 80, null);
-            g2d.drawImage(new ImageIcon(getClass().getResource("/images/logoShiftKey.png")).getImage(),390, 120, 120, 120,null);
+            g2d.drawImage(new ImageIcon(getClass().getResource("/images/logoShiftKey.png")).getImage(),410, 120, 120, 120,null);
             g2d.setColor(Color.black);            
             g2d.setFont(new Font("'Ejecutando Grandes Ideas'",Font.BOLD,20));
             g2d.drawString(g2d.getFont().getName(), 140, 260);
