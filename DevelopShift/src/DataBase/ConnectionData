@@ -1,0 +1,9 @@
+#Conection info for database connections
+#Database Name:
+nombre_de_base_de_datos
+#Host:
+host_donde_se_encuentra_base_de_datos
+#User:
+usuario_de_base_de_datos
+#Password:
+contraseña_de_usuario_
