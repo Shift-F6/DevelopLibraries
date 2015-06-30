@@ -1,5 +1,5 @@
 
-package Main;
+package DataBase;
 
 import java.awt.Toolkit;
 import java.sql.Connection;
@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-public class Conexion {
+public class ConectionDB {
     
     //VARIABLES
     private Connection conexion;
@@ -17,7 +17,7 @@ public class Conexion {
     private final String usuarioBD;
     private final String contrasenaBD;
     
-    public Conexion(String nBD, String hBD, String uBD, String cBD) {
+    public ConectionDB(String nBD, String hBD, String uBD, String cBD) {
         this.nombreBD = nBD;
         this.hostBD = hBD;
         this.usuarioBD = uBD;
